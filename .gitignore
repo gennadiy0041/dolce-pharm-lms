@@ -1,0 +1,24 @@
+# зависимости и сборка
+.venv/
+node_modules/
+frontend/dist/
+frontend/public/pdfjs/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# результаты прогонов
+e2e/results/
+e2e/test-results/
+e2e/playwright-report/
+
+# локальные данные (база, файлы, сертификаты) лежат вне проекта: %LOCALAPPDATA%\DolcePharmLMS
+data/
+*.log
+
+# ролики тизера: в них кадры чужого телевыпуска, разрешения на публикацию нет (docs/защита/тизер/ТИЗЕР.md)
+docs/защита/тизер/*.mp4
+# копии прошлых сборок — дублируют исходники
+releases/
+e2e/node_modules/
+frontend/node_modules/

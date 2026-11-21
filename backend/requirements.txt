@@ -1,0 +1,27 @@
+# Сервер и API
+fastapi==0.115.12
+uvicorn[standard]==0.34.2
+python-multipart==0.0.20
+pydantic==2.11.4
+
+# База данных: PostgreSQL (встроенные бинарники для запуска без установки) + миграции
+SQLAlchemy==2.0.40
+alembic==1.15.2
+psycopg[binary]==3.2.9
+pgserver==0.1.4
+
+# Документы: PDF-сертификаты и протоколы, чтение и конвертация Office
+reportlab==4.4.0
+pypdf==5.4.0
+python-docx==1.1.2
+openpyxl==3.1.5
+python-pptx==1.0.2
+Pillow==11.2.1
+
+# HTTPS для локальной сети и QR-код для телефона
+cryptography==44.0.3
+qrcode==8.2
+
+# Тесты API
+pytest==8.3.5
+httpx==0.28.1

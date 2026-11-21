@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480">
+  <!-- плечи и халат -->
+  <path d="M40 480c0-96 58-150 160-150s160 54 160 150z" fill="#F7F5EF" stroke="#C9C3B4" stroke-width="4"/>
+  <path d="M160 334l40 62 40-62-22-16h-36z" fill="#0E5F58"/>
+  <path d="M158 332l42 70-34 46-36-98z" fill="#FFFFFF" stroke="#C9C3B4" stroke-width="3"/>
+  <path d="M242 332l-42 70 34 46 36-98z" fill="#FFFFFF" stroke="#C9C3B4" stroke-width="3"/>
+  <rect x="244" y="408" width="66" height="42" rx="5" fill="#FFFFFF" stroke="#0E5F58" stroke-width="3"/>
+  <rect x="252" y="417" width="50" height="6" rx="3" fill="#0E5F58"/><rect x="252" y="429" width="36" height="5" rx="2.5" fill="#A9B4B0"/><rect x="252" y="438" width="42" height="5" rx="2.5" fill="#A9B4B0"/>
+  <!-- шея и голова -->
+  <path d="M172 276h56v56c0 18-56 18-56 0z" fill="#DDA77B"/>
+  <ellipse cx="124" cy="206" rx="15" ry="22" fill="#E5B187"/><ellipse cx="276" cy="206" rx="15" ry="22" fill="#E5B187"/>
+  <path d="M124 190c0-66 34-98 76-98s76 32 76 98c0 62-32 104-76 104s-76-42-76-104z" fill="#EDBE96"/>
+  <!-- волосы и шапочка -->
+  <path d="M124 176c2-22 8-36 16-46 6 22 24 34 60 34s54-12 60-34c8 10 14 24 16 46 6-70-22-112-76-112s-82 42-76 112z" fill="#2C2A29"/>
+  <path d="M118 150c0-58 36-92 82-92s82 34 82 92c-24-18-52-26-82-26s-58 8-82 26z" fill="#FFFFFF" stroke="#C9C3B4" stroke-width="4"/>
+  <path d="M120 146c24-17 51-25 80-25s56 8 80 25l-1-16c-24-15-50-22-79-22s-55 7-79 22z" fill="#0E5F58"/>
+
+  <path d="M148 186l40 14M252 186l-40 14" fill="none" stroke="#2C2A29" stroke-width="7" stroke-linecap="round"/>
+  <ellipse cx="170" cy="216" rx="8" ry="8" fill="#2C2A29"/><ellipse cx="230" cy="216" rx="8" ry="8" fill="#2C2A29"/>
+  <circle cx="173" cy="213" r="2.4" fill="#FFFFFF"/><circle cx="233" cy="213" r="2.4" fill="#FFFFFF"/>
+  <ellipse cx="150" cy="242" rx="14" ry="8" fill="#E08A7A" opacity=".55"/><ellipse cx="250" cy="242" rx="14" ry="8" fill="#E08A7A" opacity=".55"/>
+  <path d="M198 224q-8 22 6 24" fill="none" stroke="#C98F62" stroke-width="5" stroke-linecap="round"/>
+  <path d="M174 276q26-18 52 0" fill="none" stroke="#8E4B33" stroke-width="7" stroke-linecap="round"/>
+</svg>

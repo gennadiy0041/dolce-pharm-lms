@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Обучение смены без связи в цеху — памятка для отдела обучения</title>
+<!-- Источник памятки, которую оставляют отделу обучения. PDF собирается командой из docs/ЗАЩИТА.md, раздел «Как пересобрать материалы». -->
+<style>
+  @font-face { font-family: 'Golos Text'; src: url('../assets/golos-text-cyrillic-wght-normal.woff2') format('woff2'); font-weight: 400 900; unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+  @font-face { font-family: 'Golos Text'; src: url('../assets/golos-text-latin-wght-normal.woff2') format('woff2'); font-weight: 400 900; unicode-range: U+0000-00FF, U+2000-206F, U+20AC, U+2190-2193, U+2212; }
+  @page { size: A4; margin: 0; }
+  :root { --brand: #4f007d; --brand-dark: #36005a; --soft: #f1e9f8; --line: #d3bfe6; --ink: #1c1326; --muted: #5f566b; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { font-family: 'Golos Text', 'Segoe UI', sans-serif; color: var(--ink); font-size: 10.5pt; line-height: 1.35; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { width: 210mm; height: 297mm; display: flex; flex-direction: column; overflow: hidden; }
+  p, h1, h2, h3 { margin: 0; }
+
+  .top { background: var(--brand); color: #fff; padding: 9mm 14mm 9mm; display: flex; align-items: center; gap: 9mm; }
+  .top .plaque { background: #fff; border-radius: 3mm; padding: 2.2mm 3.4mm; flex: none; }
+  .top .plaque img { display: block; height: 15mm; }
+  .top h1 { font-size: 23pt; line-height: 1.08; letter-spacing: -0.015em; font-weight: 800; }
+  .top p { margin-top: 2mm; font-size: 11.5pt; color: #e6d7f3; }
+
+  main { flex: 1; padding: 8mm 14mm 0; display: flex; flex-direction: column; gap: 7mm; }
+  h2 { font-size: 9pt; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brand-dark); font-weight: 800; margin-bottom: 3mm; }
+
+  .steps { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.22fr) minmax(0, 1fr); gap: 5mm; }
+  .step { display: flex; flex-direction: column; gap: 2.5mm; min-width: 0; }
+  .step h3 { display: flex; align-items: center; gap: 2.4mm; font-size: 12pt; white-space: nowrap; }
+  .step h3 b { flex: none; width: 7.5mm; height: 7.5mm; border-radius: 50%; background: var(--brand); color: #fff; display: grid; place-items: center; font-size: 10.5pt; }
+  .pic { height: 57mm; border-radius: 3mm; background: var(--soft); display: flex; align-items: center; justify-content: center; gap: 2.6mm; padding: 3.5mm; overflow: hidden; }
+  .pic img.wide { max-width: 100%; max-height: 100%; border-radius: 1.6mm; border: 0.25mm solid var(--line); box-shadow: 0 1mm 3mm rgba(28, 19, 38, 0.18); }
+  .pic img.phone { height: 100%; border-radius: 3mm; border: 1mm solid var(--ink); box-shadow: 0 1mm 3mm rgba(28, 19, 38, 0.2); }
+  .step p { color: var(--muted); font-size: 10pt; }
+
+  .nums { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4mm; }
+  .num { border: 0.4mm solid var(--line); border-radius: 3mm; padding: 4mm 4mm 4.2mm; }
+  .num b { display: block; font-size: 24pt; line-height: 1; font-weight: 800; color: var(--brand); letter-spacing: -0.02em; white-space: nowrap; }
+  .num strong { display: block; margin-top: 2.4mm; font-size: 10.5pt; line-height: 1.25; }
+  .num span { display: block; margin-top: 1mm; font-size: 8.8pt; color: var(--muted); line-height: 1.3; }
+  .src { margin-top: 2.5mm; font-size: 8.6pt; color: var(--muted); }
+
+  .two { display: grid; grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr); gap: 5mm; }
+  .box { border-radius: 3mm; padding: 4.5mm 5mm; background: var(--soft); }
+  ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 2.2mm; }
+  ul.cols2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2.6mm 4mm; }
+  li { display: flex; gap: 2.4mm; align-items: flex-start; }
+  li i { flex: none; width: 5mm; height: 5mm; border-radius: 50%; background: var(--brand); margin-top: 0.3mm; position: relative; }
+  li i::after { content: ''; position: absolute; left: 1.75mm; top: 1.05mm; width: 1.2mm; height: 2.2mm; border: solid #fff; border-width: 0 0.5mm 0.5mm 0; transform: rotate(45deg); }
+  li b { display: block; font-weight: 700; font-size: 9.8pt; line-height: 1.25; white-space: nowrap; }
+  li small { display: block; font-size: 8.6pt; color: var(--muted); line-height: 1.3; }
+  /* блок «Встраивается в предприятие»: тёмный, чтобы перекликаться с шапкой */
+  .box.dark { background: var(--brand); color: #fff; display: flex; flex-direction: column; gap: 3.2mm; }
+  .box.dark h2 { color: #e6d7f3; margin-bottom: 0.4mm; }
+  .fit { display: flex; gap: 3mm; align-items: flex-start; }
+  .fit img { flex: none; width: 9mm; height: 9mm; padding: 1.9mm; border-radius: 50%; background: #6b2d96; }
+  .fit p { font-size: 8.6pt; line-height: 1.3; color: #e6d7f3; }
+  .fit b { display: block; font-size: 9.8pt; line-height: 1.25; color: #fff; white-space: nowrap; }
+
+  footer { padding: 4mm 14mm 6mm; font-size: 8.4pt; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="top">
+    <div class="plaque"><img src="../assets/dolce-pharm.png" alt="Dolce-Pharm"></div>
+    <div>
+      <h1>Обучение смены<br>без связи в цеху</h1>
+      <p>Оператор проходит инструкцию на телефоне. Результат и протокол приходят к вам сами.</p>
+    </div>
+  </div>
+
+  <main>
+    <section>
+      <h2>Как это работает</h2>
+      <div class="steps">
+        <div class="step">
+          <h3><b>1</b>Назначить курс</h3>
+          <div class="pic"><img class="wide" src="../assets/screens/assign-dialog-2x.png" alt="Окно «Назначить курс»"></div>
+          <p>С ноутбука — сотруднику или всему участку. Курс собирается из обычных файлов.</p>
+        </div>
+        <div class="step">
+          <h3><b>2</b>Сдать без сети</h3>
+          <div class="pic">
+            <img class="phone" src="../assets/screens/06-phone-offline-reopened.png" alt="Телефон без связи: курс готов">
+            <img class="phone" src="../assets/screens/14-phone-answers-saved-offline.png" alt="Ответы сохранены на телефоне">
+          </div>
+          <p>Курс скачан заранее. В цеху связь не нужна — ответы хранятся на телефоне.</p>
+        </div>
+        <div class="step">
+          <h3><b>3</b>Получить протокол</h3>
+          <div class="pic"><img class="wide" src="../assets/screens/certificate.png" alt="Именной сертификат"></div>
+          <p>Результат приходит сам. Сертификат и протокол — PDF для печати.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Измерено на настоящем телефоне</h2>
+      <div class="nums">
+        <div class="num"><b>1,6 с</b><strong>от возврата сети до приёма результата</strong><span>приложение было закрыто</span></div>
+        <div class="num"><b>0</b><strong>дублей и потерь</strong><span>две сдачи — две строки в отчёте</span></div>
+        <div class="num"><b>2,6 МБ</b><strong>весь курс на телефоне</strong><span>PDF, Word, Excel, PowerPoint, видео, тест</span></div>
+        <div class="num"><b>0 ₸</b><strong>лицензий и облаков</strong><span>сервер и данные — у вас</span></div>
+      </div>
+      <p class="src">POCO X7 Pro, Android 15, Chrome · 20.11.2026 · один телефон, замеры после 2–10 минут без сети.</p>
+    </section>
+
+    <div class="two">
+      <section class="box">
+        <h2>Что уже работает</h2>
+        <ul class="cols2">
+          <li><i></i><span><b>Курсы из ваших файлов</b><small>PDF, Word, Excel, видео</small></span></li>
+          <li><i></i><span><b>Тесты</b><small>четыре типа вопросов</small></span></li>
+          <li><i></i><span><b>Библиотека</b><small>поиск работает и без сети</small></span></li>
+          <li><i></i><span><b>Время и отчёты</b><small>выгрузка в Excel</small></span></li>
+          <li><i></i><span><b>Сертификат и протокол</b><small>PDF для печати</small></span></li>
+          <li><i></i><span><b>Оценка 180/360</b><small>сам, руководитель, коллеги</small></span></li>
+          <li><i></i><span><b>Диалоговый тренажёр</b><small>нештатные ситуации</small></span></li>
+          <li><i></i><span><b>Три роли</b><small>у каждой — свой доступ</small></span></li>
+        </ul>
+      </section>
+      <section class="box dark">
+        <h2>Для предприятия</h2>
+        <div class="fit"><img src="../assets/icons/server-white.png" alt=""><p><b>Данные остаются у вас</b>Сервер в вашей сети, без зарубежных облаков</p></div>
+        <div class="fit"><img src="../assets/icons/workflow-white.png" alt=""><p><b>1С и Битрикс24</b>Готовый REST API — основа для интеграции</p></div>
+        <div class="fit"><img src="../assets/icons/smartphone-white.png" alt=""><p><b>Личные телефоны</b>Ставится из браузера, без магазина приложений</p></div>
+      </section>
+    </div>
+  </main>
+
+  <footer>Прототип. Все ФИО, участки и документы в демонстрации вымышлены — учебные образцы.</footer>
+</div>
+</body>
+</html>
